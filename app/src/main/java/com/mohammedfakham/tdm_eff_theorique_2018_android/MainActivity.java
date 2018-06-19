@@ -1,5 +1,7 @@
 package com.mohammedfakham.tdm_eff_theorique_2018_android;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -37,6 +39,13 @@ public class MainActivity extends AppCompatActivity {
 
         calculer.setOnClickListener((View v) -> {
             calculer(Integer.parseInt(vitesse.getText().toString()));
+        });
+
+        // My Facebook
+        findViewById(R.id.face).setOnClickListener((View v) -> {
+            Intent i = new Intent(Intent.ACTION_VIEW);
+            i.setData(Uri.parse("http://fb.com/mohammed.fakham"));
+            startActivity(i);
         });
 
     }
